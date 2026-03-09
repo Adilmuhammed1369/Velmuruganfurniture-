@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family: Poppins, sans-serif;
+  background: rgb(255,250,246);
+}
+
+/* HEADER */
+.header{
+  height:60px;
+  background: rgba(255,218,185,0.66);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:600;
+}
+
+/* MAIN BOX */
+.container{
+  width:90%;
+  max-width:900px;
+  margin:30px auto;
+  background:peachpuff;
+  padding:25px;
+  border-radius:20px;
+}
+
+/* INPUTS */
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:20px;
+  border:none;
+}
+
+/* BUTTON */
+button{
+  background:orange;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:15px;
+}
+
+button:hover{
+  opacity:.9;
+}
+
+/* PRODUCT LIST */
+.product{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:white;
+  padding:10px;
+  border-radius:15px;
+  margin-top:15px;
+}
+
+.product img{
+  width:60px;
+  height:60px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">ADMIN PANEL</div>
+
+<div class="container">
+
+<h3>Add New Product</h3>
+
+<input type="text" id="name" placeholder="Product Name">
+<input type="text" id="price" placeholder="Product Price">
+<input type="file" id="image">
+
+<br><br>
+<button onclick="addProduct()">Add Product</button>
+
+<hr>
+
+<h3>All Products</h3>
+
+<div id="productList"></div>
+
+
+<button onclick="addAllToIndex()" class="add-all-btn">
+ADD ALL TO INDEX
+</button>
+</div><script>
+
+let adminProducts = JSON.parse(localStorage.getItem("adminProducts")) || [];
+
+function addProduct(){
+
+let name = document.getElementById("name").value;
+let price = document.getElementById("price").value;
+let imgFile = document.getElementById("image").files[0];
+
+if(!name || !price || !imgFile){
+alert("Fill all fields");
+return;
+}
+
+let reader = new FileReader();
+
+reader.onload = function(){
+
+let product = {
+name:name,
+price:price,
+img:reader.result
+};
+
+adminProducts.push(product);
+
+localStorage.setItem("adminProducts", JSON.stringify(adminProducts));
+
+showAdminProducts();
+
+document.getElementById("name").value="";
+document.getElementById("price").value="";
+document.getElementById("image").value="";
+};
+
+reader.readAsDataURL(imgFile);
+}
+
+function showAdminProducts(){
+
+let container = document.getElementById("productList");
+
+container.innerHTML = "";
+
+adminProducts.forEach((item,index)=>{
+
+container.innerHTML += `
+<div class="product">
+
+<img src="${item.img}">
+
+<div>
+<h4>${item.name}</h4>
+<p>₹${item.price}</p>
+</div>
+
+<button onclick="deleteAdminProduct(${index})">Delete</button>
+
+</div>
+`;
+
+});
+
+}
+
+function deleteAdminProduct(index){
+
+adminProducts.splice(index,1);
+
+localStorage.setItem("adminProducts", JSON.stringify(adminProducts));
+
+showAdminProducts();
+}
+
+function addAllToIndex(){
+
+if(adminProducts.length === 0){
+alert("No products to add");
+return;
+}
+
+// save to index storage
+localStorage.setItem("products", JSON.stringify(adminProducts));
+
+alert("All products added to home ✅");
+
+// open index automatically
+window.location.href = "home.html";
+}
+
+// ⭐ LOAD PRODUCTS WHEN PAGE OPENS
+showAdminProducts();
+
+</script>

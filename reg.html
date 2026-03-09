@@ -1,0 +1,96 @@
+<html>
+    <head>
+    <style>
+       
+        .logg{
+            
+            align-content: center;
+            width:300px;
+         
+            
+            justify-content: center;
+            border-radius: 30px;
+          
+            
+        }
+        #registerForm{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            width:300px;
+            height:600px;
+            border:solid 2px;
+            justify-content: center;
+            border-radius: 30px;
+            background:peachpuff;
+            
+        }
+        #registerForm label{
+            padding-right: 100px;
+            
+        }
+        #registerForm input{
+            border-radius: 20px;
+        }
+    button{
+            border-radius:20px;
+            background: orange;
+        }
+.head h1{
+                text-align:center;
+            }
+            .head{width:100%;
+                height:50px;
+                background: rgba(255, 218, 185, 0.66);
+               margin:0%;
+            }
+            .hero{
+            height:100vh;
+             display: flex;
+            justify-content: center;
+            align-content: center;
+            background:rgb(255, 250, 246);
+        
+        }
+    </style>
+        
+    </head>
+    <BODY>
+          <div class="head">
+         <h1>Welcome to VELMURUGAN furnitures Please Register</h1>
+    </div>
+    <div class="hero">
+        <div class="logg">
+          
+
+        <form id="registerForm" onsubmit="reg(event)">
+  <input id="rname" placeholder="Username" required><br>
+  <input id="rpass" type="password" placeholder="Password" required><br>
+  <input id="rphone" placeholder="Phone number" required><br>
+  <input id="raddress" placeholder="Address" required><br>
+  <input id="rpincode" placeholder="Pincode" required><br>
+  <input id="rlandmark" placeholder="Landmark" required><br>
+  <button type="submit">Register</button>
+</form>
+
+<script>
+function reg(e){
+  e.preventDefault();
+
+  let user = {
+    name: rname.value,
+    pass: rpass.value,
+    phone: rphone.value,
+    address: raddress.value,
+    pincode: rpincode.value,
+    landmark: rlandmark.value
+  };
+
+  localStorage.setItem("user", JSON.stringify(user));
+
+  alert("Registered Successfully");
+  location.href="login.html";
+}
+</script>
+    </BODY>
+</html>

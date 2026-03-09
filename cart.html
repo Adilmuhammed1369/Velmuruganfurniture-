@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <style>
+            button{
+                width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    background:orange;
+    border:none;
+    color:white;
+            }
+            h1{
+                text-align:center;
+            }
+            
+            .head{
+                height:50px;
+                background: rgba(255, 218, 185, 0.66);
+            }
+            button:last-child{
+  background: crimson;
+}
+
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+li{
+  margin:15px 0;
+}
+
+.row{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  border-bottom:1px solid #ccc;
+  padding:10px;
+}
+
+.row img{
+  width:100px;
+  height:150px;
+}
+
+            
+        </style>
+
+    </head>
+    <body><div class="head">
+         <h1>Cart</h1>
+    </div> <ul id="prdscart">
+        </ul>
+
+       
+<script>
+let ul = document.getElementById("prdscart");
+
+function loadCart(){
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  ul.innerHTML = "";
+
+  if(cart.length === 0){
+    ul.innerHTML = "<h2>Your cart is empty</h2>";
+    return;
+  }
+
+  cart.forEach((item, index) => {
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+      <img src="${item.img}" width="100">
+      <p>${item.name}</p>
+      <p>${item.price}</p>
+
+      <button onclick="placeOrderFromCart(${index})">Place Order</button>
+      <button onclick="removeFromCart(${index})">Remove</button>
+    `;
+
+    ul.appendChild(li);
+  });
+}
+
+loadCart();
+
+
+function removeFromCart(index){
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.splice(index, 1);   // ❌ remove selected item
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  loadCart();  // 🔄 refresh list
+}
+
+
+function placeOrderFromCart(i){
+
+  let user = localStorage.getItem("loginUser");
+
+  if(!user){
+    alert("Please login first");
+    location.href="login.html";
+    return;
+  }
+
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  localStorage.setItem("orderProduct", JSON.stringify(cart[i]));
+
+  location.href="buy.html";
+}
+</script>
+
+
+    </body>
+</html>

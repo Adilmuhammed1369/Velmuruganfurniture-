@@ -1,0 +1,93 @@
+<html>
+    <head>
+    <style>
+        .loooo{
+            height:100vh;
+             display: flex;
+            justify-content: center;
+            align-content: center;
+            background:rgb(255, 250, 246);
+           
+        
+        }
+        .logg{
+            
+            align-content: center;
+            width:300px;
+         
+           
+            justify-content: center;
+            border-radius: 30px;
+          
+            
+        }
+        #loginForm{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            width:300px;
+            height:300px;
+            border:solid 2px;
+            justify-content: center;
+            border-radius: 30px;
+            background:peachpuff;
+            
+        }
+        #loginForm label{
+            padding-right: 100px;
+            
+        }
+        #loginForm input{
+            border-radius: 20px;
+        }
+        button{
+            border-radius:20px;
+            background: orange;
+        }
+  .head h1{
+                text-align:center;
+            }
+            .head{width:100%;
+                height:50px;
+                background: rgba(255, 218, 185, 0.66);
+               margin:0%;
+            }
+          
+
+    </style>
+        
+    </head>
+    <BODY><div class="head">
+         <h1>Welcome to VELMURUGAN furnitures Please Login</h1>
+    </div>
+        <div class="loooo">
+            <div class="logg">
+            
+
+        
+<form id="loginForm" onsubmit="login(event)">
+  <input id="lname" placeholder="Username" required><br>
+  <input id="lpass" type="password" placeholder="Password" required><br>
+  <button type="submit">Login</button>
+</form>
+  <span>new user</span><a href="reg.html"><button >register</button></a>
+        <a href="home.html"><button >guest</button></a><a href="admin.html"><button >Admin</button></a>
+        </div></div>
+
+<script>
+function login(e){
+  e.preventDefault();
+  let savedUser = JSON.parse(localStorage.getItem("user"));
+
+  if(lname.value === savedUser.name && lpass.value === savedUser.pass){
+    localStorage.setItem("loginUser", JSON.stringify(savedUser));
+    alert("Login success");
+    location.href="index.html";
+  }
+  else{
+    alert("Invalid login");
+  }
+}
+</script>
+    </BODY>
+</html>

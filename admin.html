@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Login</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Poppins;
+  background:rgb(255,250,246);
+}
+
+.box{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login{
+  background:peachpuff;
+  padding:30px;
+  border-radius:20px;
+  width:300px;
+  text-align:center;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:20px;
+}
+
+button{
+  background:orange;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="login">
+
+<h2>Admin Login</h2>
+
+<input type="text" id="user" placeholder="Username">
+<input type="password" id="pass" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+let u = document.getElementById("user").value;
+let p = document.getElementById("pass").value;
+
+if(u==="admin" && p==="1234"){
+localStorage.setItem("adminLogin","true");
+window.location.href="adminpanel.html";
+}
+else{
+alert("Wrong admin details");
+}
+
+}
+
+</script>
+
+</body>
+</html>
+
+

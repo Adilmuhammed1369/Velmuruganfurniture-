@@ -1,0 +1,278 @@
+1
+Handmade Wooden Outdoor Adirondack Natural Brown Foldable Coffee Table, Patio End Table for Poolside Garden, Living Room, Bedroom, Small Spaces (Square) 13 Inch
+
+
+2
+
+Floating Wall Mounted Wooden Shelf – Stylish Display Organizer, L-Shaped Wall Shelf for Living Room, Bedroom, Kitchen, Hallway, 17" Length,
+
+3
+
+Decazone Tree Bookshelf for Wall & Floor – 9 Tier Wooden Book Rack for Living Room, Bedroom & Office | Freestanding Modern Bookcase Organizer for Books, Decor & Magazine (Dark Brown, 9 Tier)
+
+4
+
+BLUEWUD Seonn Engineered Wood Bookshelf Crockery Storage Cabinet, Book Rack Organizer with Shelves for Décor Display & 2 Doors, Floor Standing Storage Unit for Office Library Home (Wenge, With Drawer)
+
+
+5
+BLUEWUD Molse Engineering Wood Multipurpose Floor Standing Bookshelf Decor Display Shelves Wall Book Storage Rack Organizer with Hinged Door for Office Home (Brown Maple & White)
+
+
+6
+
+BLUEWUD Maxelle Engineered Wood Bookshelf Cabinet Book Rack Organizer with Shelves for Decor Display, Cabinet Floor Standing for Home Library (Wenge & White)
+
+
+7
+
+
+Wooden Tree Wall Shelf | Stylish Wall Mounted Shelf for Home & Office Décor | Engineered Wood, Brown | Storage & Display Rack for Living Room
+
+
+8
+
+
+Callas Engineered Wood Computer Desk with Shelf – Modern Laptop Study Table for Home Office, Workstation & Writing Desk for Students and Professionals (ST-09-White)
+
+
+9
+
+
+Spyder Craft Irish Engineering Wood Modern Office Desk Study Table Computer Table for Office Work from Home Kids Study Room Workstation with Storage
+
+
+10
+
+Nilkamal Joyce Neo 4 Door Wooden Wardrobe for Bedroom | Almirah with 13 Shelves | Clothes Cupboard | Engineered Wood | Walnut
+
+
+11
+
+
+Engineered Wood Contemporary Bedside End Table with Three Open Shelves for Book Storage and a Small Nightstand Organiser Corner Stand for Office, Bedroom, Living Room Home Decor
+
+
+
+
+
+12
+
+
+Solid Sheesham Wood Sideboard Cabinet with 3 Door & 3 Shelves - Chest of Drawers Wooden Drawer Storage Cabinet for Bedroom Living Room Storage Furniture Decor (Jaden Walnut)
+
+
+<div class="showcase-container">
+            
+                  <div class="showcase"onclick="sendData(this)">
+            
+                    <a href="#" class="showcase-img-box">
+                      <img src="./assets/" alt="platinum zircon classic ring" class="showcase-img"
+                        width="70">
+                    </a>
+            
+                    <div class="showcase-content">
+            
+                      <a href="#">
+                        <h4 class="showcase-title">Wood Computer Desk with Shelf – Modern Laptop Study Table for Home Office, Workstation & Writing Desk for Students and Professionals (ST-09-White)</h4>
+                      </a>
+            
+                      <a href="#" class="showcase-category">jewellery</a>
+            
+                     
+                    </div>
+            
+                  </div>
+            
+                  <div class="showcase"onclick="sendData(this)">
+            
+                    <a href="#" class="showcase-img-box">
+                      <img src="./assets/61MyTpBEn0L._AA1080_AC_FMwebp_QL65_.png" alt="smart watche vital plus" class="showcase-img" width="70">
+                    </a>
+            
+                    <div class="showcase-content">
+            
+                      <a href="#">
+                        <h4 class="showcase-title">4 Door Wooden Wardrobe for Bedroom | Almirah with 13 Shelves | Clothes Cupboard | Engineered Wood | Walnut
+</h4>
+                      </a>
+            
+                      <a href="#" class="showcase-category">Watches</a>
+            
+                      <div class="price-box">
+                        <p class="price">25000₹</p>
+                        <del>35000₹</del>
+                      </div>
+            
+                    </div>
+            
+                  </div>
+            
+                  <div class="showcase"onclick="sendData(this)">
+            
+                    <a href="#" class="showcase-img-box">
+                      <img src="./assets/71LO+Vnz6gL._AC_UF894,1000_QL80_FMwebp_.png" alt="shampoo conditioner packs" class="showcase-img"
+                        width="70">
+                    </a>
+            
+                    <div class="showcase-content">
+            
+                      <a href="#">
+                        <h4 class="showcase-title">Wood Multipurpose Floor Standing Bookshelf Decor Display Shelves Wall Book Storage Rack Organizer with Hinged Door for Office Home (Brown Maple & White)
+</h4>
+                      </a>
+            
+                      <a href="#" class="showcase-category">cosmetics</a>
+            
+                      <div class="price-box">
+                        <p class="price">6500₹</p>
+                        <del>8000₹</del>
+                      </div>
+            
+                    </div>
+            
+                  </div>
+            
+                  <div class="showcase"onclick="sendData(this)">
+            
+                    <a href="#" class="showcase-img-box">
+                      <img src="./assets/71w6EZtiOnL._AC_UF894,1000_QL80_FMwebp_.png" alt="rose gold peacock earrings" class="showcase-img"
+                        width="70">
+                    </a>
+            
+                    <div class="showcase-content">
+            
+                      <a href="#">
+                        <h4 class="showcase-title">Wood Bookshelf Crockery Storage Cabinet, Book Rack Organizer with Shelves for Décor Display & 2 Doors, Floor Standing Storage Unit for Office Library Home (Wenge, With Drawer)
+</h4>
+                      </a>
+            
+                      <a href="#" class="showcase-category">jewellery</a>
+            
+                      <div class="price-box">
+                        <p class="price">6500₹</p>
+                        <del>8500₹</del>
+              
+              
+
+ <img src="./assets/images/products/1.jpg"alt="furniture1"width="75" height="75"class="showcase-img">
+</a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Living Room Furniture</h4>
+                    </a>
+
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <del>30000₹</del>
+                      <p class="price">25000₹</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase"onclick="sendData(this)">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="./assets/images/products/2.jpg" alt="furniture2" class="showcase-img"
+                      width="75" height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Bedroom Furniture</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <del>70000₹</del>
+                      <p class="price">40000₹</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase"onclick="sendData(this)">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="./assets/images/products/3.jpg" alt="furniture3" class="showcase-img" width="75"
+                      height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Dianing Room Furniture</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-half-outline"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <del>50000₹</del>
+                      <p class="price">25000</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="showcase"onclick="sendData(this)">
+
+                  <a href="#" class="showcase-img-box">
+                    <img src="./assets/images/products/4.jpg" alt="furniture4" class="showcase-img" width="75"
+                      height="75">
+                  </a>
+
+                  <div class="showcase-content">
+
+                    <a href="#">
+                      <h4 class="showcase-title">Office Furniture</h4>
+                    </a>
+                    <div class="showcase-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <div class="price-box">
+                      <del>60000₹</del>
+                      <p class="price">30000₹</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+

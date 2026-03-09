@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+            button{
+                width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    background:orange;
+    border:none;
+    color:white;
+            }
+            h1{
+                text-align:center;
+            }
+            #showadress{
+                width:100%;
+                height: 600px;
+
+            }
+            .head{
+                height:50px;
+                background: rgba(255, 218, 185, 0.66);
+            }
+            
+        </style>
+
+    </head>
+    <body><div class="head">
+         <h1>Confirm Order</h1>
+    </div>
+       
+        <span id="addre">Delevery Adress is</span>
+        <span id="showadress"></span>
+        <img id="prdimg"width="150">
+        <p id="prdname"></p>
+        <p id="prdprice"></p>
+        <button onclick="placeorder()">place order</button>
+        <button onclick="cancelorder()">cancel order</button>
+        
+
+<script>
+let product = JSON.parse(localStorage.getItem("orderProduct"));
+let user = JSON.parse(localStorage.getItem("loginUser"));
+
+document.getElementById("prdname").innerText = product.name;
+document.getElementById("prdprice").innerText = product.price;
+document.getElementById("prdimg").src=product.img;
+document.getElementById("showadress").innerHTML =
+`
+Name : ${user.name} <br>
+Phone : ${user.phone} <br>
+Address : ${user.address} <br>
+Pincode : ${user.pincode} <br>
+Landmark : ${user.landmark}
+`;
+
+function placeorder(){
+  alert("Order placed successfully 🎉");
+  localStorage.removeItem("orderProduct");
+  location.href="productdetails.html";
+}
+
+function cancelorder(){
+  location.href="cart.html";
+}
+</script>
+    </body>
+</html>

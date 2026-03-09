@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <style>
+            button{
+                width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    background:orange;
+    border:none;
+    color:white;
+            }
+            h1{
+                text-align:center;
+            }
+            #prdimg{
+                width:100px;
+                height: 150px;
+                border:solid;
+
+            }
+            .head{
+                height:50px;
+                background: rgba(255, 218, 185, 0.66);
+            }
+            
+button:last-child{
+  background: crimson;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+li{
+  margin:15px 0;
+}
+
+.row{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  border-bottom:1px solid #ccc;
+  padding:10px;
+}
+
+.row img{
+  width:100px;
+  height:150px;
+}
+
+
+        </style>
+
+    </head>
+    <body><div class="head">
+         <h1>Wishlist</h1>
+    </div><ul id="prdscart">
+       
+        </ul>
+        
+<script>
+let ul = document.getElementById("prdscart");
+
+function loadWish(){
+
+  let wish = JSON.parse(localStorage.getItem("wishlist")) || [];
+  ul.innerHTML = "";
+
+  if(wish.length === 0){
+    ul.innerHTML = "<h2>Your wishlist is empty</h2>";
+    return;
+  }
+
+  wish.forEach((item, index) => {
+
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+      <img src="${item.img}" width="100">
+      <p>${item.name}</p>
+      <p>${item.price}</p>
+
+      <button onclick="placeOrderFromWish(${index})">Place Order</button>
+      <button onclick="removeFromWish(${index})">Remove</button>
+    `;
+
+    ul.appendChild(li);
+  });
+}
+
+loadWish();
+
+
+function removeFromWish(index){
+
+  let wish = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  wish.splice(index, 1);   // ❌ remove item
+
+  localStorage.setItem("wishlist", JSON.stringify(wish));
+
+  loadWish();  // 🔄 refresh
+}
+
+
+function placeOrderFromWish(i){
+
+  let user = localStorage.getItem("loginUser");
+
+  if(!user){
+    alert("Please login first");
+    location.href="login.html";
+    return;
+  }
+
+  let wish = JSON.parse(localStorage.getItem("wishlist"));
+  localStorage.setItem("orderProduct", JSON.stringify(wish[i]));
+
+  location.href="buy.html";
+}
+</script>
+
+
+
+
+    </body>
+</html>

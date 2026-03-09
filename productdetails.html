@@ -1,0 +1,143 @@
+<html>
+    <head>
+    <style>
+   .header{
+    width:100%;
+
+    background:peachpuff;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+   }.header h1{
+       flex: 1;
+    text-align: center;
+    margin: 0;}
+   .content{display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+   }
+   .prddetails{
+    
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top:20px;
+
+   }
+   .bt{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background:orange;
+    border:none;
+    color:white;
+    margin: 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+   }
+   a{
+    text-decoration: none;
+   }
+   #primg{
+    max-width:80%;
+    height:auto;
+   
+    border-radius:25px
+   }
+   #primg{
+    width:500px;
+    height:400px;
+   }
+   .wc{
+    width:100px;
+    height:30px;
+
+    border-radius: 25px;
+    background: orange;
+    border: none;
+    color: white;
+    margin-left: 10px;
+   }
+
+    </style>
+        
+    </head>
+    <BODY>
+        <div class="hero">
+            <div class="header">
+                <a href="index.html"><h1><</h1></a>
+                <h1 id="prdname"></h1><a href="wishlist.html"><button class="wc"> wishlist</button></a><a href="cart.html"><button class="wc">cart</button></a>
+              
+               
+            </div>
+            <div class="content">
+                <img id="primg"src=""alt="product image">
+            </div>
+            <div class="prddetails">
+                <span id="prnamedetails"></span>
+                <span id="prprice"></span>
+                <button class="bt"onclick="buy()">Buy Now</button>
+                <button class="bt"onclick="cart()">Add to Cart</button>
+                <button class="bt"onclick="wishl()">Add to Whishlist</button>
+
+            </div>
+
+       
+        
+        </div>
+        
+<script>
+const data = JSON.parse(localStorage.getItem("product"));
+
+if (data) {
+  document.getElementById("primg").src = data.img;
+  document.getElementById("prdname").innerText = data.name;
+  document.getElementById("prnamedetails").innerText = data.name;
+  document.getElementById("prprice").innerText = data.price;
+}
+
+function cart(){
+  let product = JSON.parse(localStorage.getItem("product"));
+  let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cartItems.push(product);
+
+  localStorage.setItem("cart", JSON.stringify(cartItems));
+  alert("Added to Cart");
+}
+
+function wishl(){
+  let product = JSON.parse(localStorage.getItem("product"));
+  let wishItems = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  wishItems.push(product);
+
+  localStorage.setItem("wishlist", JSON.stringify(wishItems));
+  alert("Added to Wishlist");
+}
+
+function buy(){
+
+  let user = localStorage.getItem("loginUser");
+
+  if(!user){
+    alert("Please login first");
+    location.href="login.html";
+    return;
+  }
+
+  let product = JSON.parse(localStorage.getItem("product"));
+  localStorage.setItem("orderProduct", JSON.stringify(product));
+
+  location.href="buy.html";
+}
+
+</script>
+    </BODY>
+</html>
