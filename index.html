@@ -82,7 +82,7 @@ function login(e){
   if(lname.value === savedUser.name && lpass.value === savedUser.pass){
     localStorage.setItem("loginUser", JSON.stringify(savedUser));
     alert("Login success");
-    location.href="index.html";
+    location.href="home.html";
   }
   else{
     alert("Invalid login");
